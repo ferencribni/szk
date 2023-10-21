@@ -1,0 +1,158 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.hero {
+    background: url('hero.jpg') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slide-up 1.5s forwards;
+}
+
+.hero-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+@keyframes slide-up {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cta {
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: all 0.5s;
+}
+
+.cta:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    
+}
+
+#menu {
+    padding-top: 80px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0 20px;
+    margin: 0;
+}
+.menu a span {
+    font-size: 1.5em;  /* szöveg nagyitasa*/
+}
+
+.menu li {
+    border: 1px solid #007BFF;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu li:hover {
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+}
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    color: #007BFF;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.menu img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.menu a:hover {
+    color: #0056b3;
+}
+
+.menu a:hover img {
+    transform: scale(1.05);
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007BFF;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+    display: none;
+    transition: opacity 0.3s;
+    font-size: 1.7em;
+}
+
+#back-to-top:target {
+    display: block;
+}
+
+footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 1.5em;
+}
+
+.footer-link {
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #0056b3;
+}
+.access-denied {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.access-denied h1 {
+    font-size: 3em;
+    color: red;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diploma Thesis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="hero">
+        <div class="hero-overlay">
+            <nav></nav>
+            <div class="hero-text">
+                <h2>Szociális kompetencia kérdőív</h2>
+                
+                <p>
+</p>
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfigQcaRC3N49J0YC7bc2vP8EhpdSlR72W5tBWi1v-813uaxA/viewform?usp=sf_link" class="cta">Kérdőív megnyitása</a>
+                
+            </div>
+        </div>
+    </header>
+    <section id="menu">
+        <ul class="menu">
+            <li>
+                
+                </a>
+            </li>
+        </ul>
+    </section>
+    <a href="#top" id="back-to-top">Vissza a tetejére</a>
+    <footer>
+        <p>&copy; 2024 František Ribní | Minden jog fenntartva.</p>
+        <p>Email: 128209@student.ujs.sk</p>
+        <p>Szekunder Email: ribniferenc780@gmail.com</p>
+    </footer>
+    <script>
+        window.addEventListener('scroll', function() {
+            const backToTopBtn = document.getElementById('back-to-top');
+
+            if (window.pageYOffset > 100) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+
+        document.querySelector('#back-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // képek forgása bemenetek
+        const heroImages = [
+            'hero.jpg',
+            'hero1.jpg',
+            'hero2.jpg'
+            
+        ];
+
+        // képek váltakozása
+        setInterval(function() {
+            const hero = document.querySelector('.hero');
+            let imageIndex = Number(hero.getAttribute('data-image-index'));
+
+            imageIndex = (imageIndex + 1) % heroImages.length; // következő kép
+
+            hero.style.backgroundImage = `url('${heroImages[imageIndex]}')`;
+            hero.setAttribute('data-image-index', imageIndex);
+        }, 5000); // 5 másodpercenkénti váltás
+
+         // jelszó és kód , 5 percenként kéri, illetve első belépéskor
+       
+    
+
+
+    </script>
+</body>
+
+</html>
